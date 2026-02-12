@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 @Table(name = "orders") // 'order' is SQL keyword
 public class Order 
 {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,8 +15,6 @@ public class Order
     private double totalAmount;
 
     private String status;
-
-    // getters & setters
 
     public Long getId() 
     {
