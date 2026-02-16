@@ -17,14 +17,12 @@ public class AuthController
     @Autowired
     private AuthService authService;
 
-    // User Registration
     @PostMapping("/register")
     public String register(@RequestBody User user) 
     {
         return authService.register(user);
     }
 
-    // User Login (JWT Token)
     @PostMapping("/login")
     public String login(@RequestBody User user) 
     {
