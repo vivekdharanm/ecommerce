@@ -22,7 +22,6 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 public class JwtFilter extends OncePerRequestFilter 
 {
-
     @Autowired
     private JwtUtil jwtUtil;
 
@@ -52,12 +51,10 @@ public class JwtFilter extends OncePerRequestFilter
         if (username != null &&
             SecurityContextHolder.getContext().getAuthentication() == null) 
         {
-
             User user = userRepository.findByUsername(username);
 
             if (user != null && jwtUtil.validateToken(token, username)) 
             {
-
                 UsernamePasswordAuthenticationToken authToken =
                         new UsernamePasswordAuthenticationToken(
                                 user.getUsername(),
