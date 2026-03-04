@@ -13,7 +13,6 @@ import com.ecom.ecommerce_app.service.AuthService;
 @RequestMapping("/auth")
 public class AuthController 
 {
-
     @Autowired
     private AuthService authService;
 
